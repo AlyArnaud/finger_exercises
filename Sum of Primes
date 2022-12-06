@@ -1,0 +1,31 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Dec  6 20:19:46 2022
+
+Finger Exercise from Introduction to Computation 
+and Programming Using Python
+
+Write a program that prints the sum of the prime 
+numbers greater than 2 and less than 1000.
+
+@author: User
+"""
+
+
+sum = 0
+#Check if passed integer is prime
+def is_prime(n):
+    for dividend in range(2, n//2):
+        if n % dividend == 0: #Not prime
+            return 0
+    return n
+    
+#iterate every odd number 3 through 999
+for i in range(3, 1000, 2):
+    if(is_prime(i) != 0):
+        sum = sum + is_prime(i)
+print("Sum of primes: ", sum)
+
+
+    
+    
